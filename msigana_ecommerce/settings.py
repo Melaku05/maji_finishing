@@ -16,7 +16,7 @@ SECRET_KEY = config('SECRET_KEY')
 DEBUG = True
 
 # ALLOWED_HOSTS configuration
-ALLOWED_HOSTS = ["localhost","kodeplc.com"]
+ALLOWED_HOSTS = ["localhost","sonaplc.com"]
 
 
 # Application definition
