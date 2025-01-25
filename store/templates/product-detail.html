@@ -17,7 +17,7 @@
    
 <div class="py-4 container flex gap-3 items-center px-4 sm:px-8 md:px-16 lg:px-32 xl:px-32 2xl:max-w-9xl 2xl:mx-auto">
     <a href="{% url 'home' %}" class="text-primary text-base font-medium uppercase">
-        <i class="fas fa-home"></i>
+        <i class="fas fa-home"></i> 
     </a>
     <span class="text-sm text-gray-400"><i class="fas fa-chevron-right"></i></span>
     <a href="{{single_product.category.get_url}}" class="text-primary text-base font-medium capitalize">
@@ -32,7 +32,7 @@
             <div style="position: relative; text-align: center;">
                 <img id="main-img" src="{{ main_image.image.url }}" class="max-w-full  lg:max-h-[340px] xl:max-h-[390px] 2xl:max-h-[420px]">
                 <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 30px; font-weight: 300; color: silver; font-family: 'Pacifico', cursive;">
-                    <i class="fas fa-star"></i> KODE PLC
+                    <i class="fas fa-star"></i> SONA PLC
                 </div>
                 <div class="flex justify-end absolute bottom-2 right-2 space-x-2">
 
@@ -288,7 +288,7 @@ function slideImages(direction) {
                         {% if main_image %}
                             <img class="w-full h-full object-cover" src="{{ main_image.image.url }}" alt="{{ product.product_name }}">
                             <div class="absolute inset-0 flex items-center justify-center">
-                                <span class="text-orange-400 text-lg md:text-2xl font-thin p-2 rounded"><i class="fas fa-star"></i> KODE PLC</span>
+                                <span class="text-orange-400 text-lg md:text-2xl font-thin p-2 rounded"><i class="fas fa-star"></i> SONA PLC</span>
                             </div>
                         {% endif %}
                         {% endwith %}
@@ -459,7 +459,7 @@ function slideImages(direction) {
             const categorySlug = "{{ single_product.category.get_url }}";
             const productSlug = "{{ single_product.product_slug }}";
     
-            const productUrl = `http://138.197.182.68${categorySlug}${productSlug}`;
+            const productUrl = `http://sonaplc${categorySlug}${productSlug}`;
     
             if (navigator.share) {
                 navigator.share({
