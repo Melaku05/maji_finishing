@@ -21,17 +21,24 @@
       <img src="{% static 'images/menu_slideshow/Limestone2.jpg' %}" alt="Image 2" class="w-full h-full object-cover">
   </div>
   <div class="slide absolute inset-0 flex items-center justify-center transition-opacity duration-1000 ease-in-out" style="opacity: 0;">
-      <img src="{% static 'images/menu_slideshow/Mica flex3.jpg' %}" alt="Image 3" class="w-full h-full object-cover">
+      <img src="{% static 'images/menu_slideshow/Micaflex3.jpg' %}" alt="Image 8" class="w-full h-full object-cover">
   </div>
  
   <div class="slide absolute inset-0 flex items-center justify-center transition-opacity duration-1000 ease-in-out" style="opacity: 0;">
-      <img src="{% static 'images/menu_slideshow/White Silica Sand.jpg' %}" alt="Image 5" class="w-full h-full object-cover">
+      <img src="{% static 'images/menu_slideshow/Whitesilicasand.jpg' %}" alt="Image 5" class="w-full h-full object-cover">
   </div>
   <div class="slide absolute inset-0 flex items-center justify-center transition-opacity duration-1000 ease-in-out" style="opacity: 0;">
     <img src="{% static 'images/menu_slideshow/Dolomite4.jpg' %}" alt="Image 4" class="w-full h-full object-cover">
 </div>
 <div class="slide absolute inset-0 flex items-center justify-center transition-opacity duration-1000 ease-in-out" style="opacity: 0;">
   <img src="{% static 'images/menu_slideshow/Dolomite3.jpg' %}" alt="Image 3" class="w-full h-full object-cover">
+</div>
+<div class=" pt-64 text-center card">
+  <a
+      href="{% url 'contact-us' %}"
+      class="bg-green-900 border md:text-2xl border-slate-500  text-white px-4 md:px-8 py-3 font-medium rounded-md  hover:bg-green-950 hover:text-primary transition volkhov">
+      Leave your message
+  </a>
 </div>
 </div>
 
@@ -130,7 +137,7 @@
        <!-- ====== About/chef Section End -->
     <section class="section-name">
       <!-- banner -->
-      <div
+      {% comment %} <div
       class="bg-no-repeat bg-center pt-16 pb-8 md:py-36 relative 
          bg-cover  sm:h-auto h-[300px]"
       {% if not footer.main_page_image.url %}
@@ -140,16 +147,15 @@
       {% endif %}
       <div class="container mx-auto px-4 sm:px-8 md:px-16 lg:px-16 xl:px-32 2xl:px-64">
           <div class="flex flex-col lg:flex-row items-center">
-              <!-- banner content -->
+    
               <div class="w-full lg:pr-8">
                 <h1 class="xl:text-6xl md:text-5xl text-5xl font-bold leading-tight mb-4 text-center card text-[#e49124]">
-                  {% comment %} <span class="bg-slate-50 bg-opacity-30 px-3 py-2 text-green-900 merienda">
+                  <span class="bg-slate-50 bg-opacity-30 px-3 py-2 text-green-900 merienda">
                     {{footer.company_main_page_title}}
-                  </span> {% endcomment %}
+                  </span> 
                   <br class="hidden sm:block" />
                 </h1>
           
-                  <!-- banner button -->
                   <div class="md:mt-96  text-center card">
                       <a
                           href="{% url 'contact-us' %}"
@@ -159,16 +165,16 @@
                   </div>
               </div>
               <!-- video component -->
-              {% comment %} <div class="lg:w-1/2 w-full mt-8 lg:mt-0 relative">
+              <div class="lg:w-1/2 w-full mt-8 lg:mt-0 relative">
                   <div class="relative" style="padding-top: 56.25%;">
                       <div class="absolute inset-0 flex items-center justify-center cursor-pointer">
                           <i class="fas fa-play text-6xl text-white"></i>
                       </div>
                   </div>
-              </div> {% endcomment %}
+              </div> 
           </div>
       </div>
-  </div>
+  </div> {% endcomment %}
 <!-- Modal for Video -->
 {% comment %} <div id="videoModal" class="hidden fixed inset-0 bg-black bg-opacity-75 items-center justify-center z-50">
   <div class="relative w-full max-w-full sm:max-w-lg md:max-w-4xl lg:max-w-5xl">
