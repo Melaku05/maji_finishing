@@ -12,26 +12,55 @@
 </style>
 
 
-<div class="relative w-full h-[400px]">
+<div class="relative w-full h-[450px] md:h-[500px]">
   <!-- Slides -->
   <div class="slide absolute inset-0 flex items-center justify-center transition-opacity duration-1000 ease-in-out" style="opacity: 1;">
-      <img src="{% static 'images/menu_slideshow/Dolomite1.jpg' %}" alt="Image 1" class="w-full h-full object-cover">
+      <img src="{% static 'images/menu_slideshow/dolomitea3.jpg' %}" alt="Image 1" class="w-full h-full object-cover">
   </div>
   <div class="slide absolute inset-0 flex items-center justify-center transition-opacity duration-1000 ease-in-out" style="opacity: 0;">
       <img src="{% static 'images/menu_slideshow/Limestone2.jpg' %}" alt="Image 2" class="w-full h-full object-cover">
   </div>
   <div class="slide absolute inset-0 flex items-center justify-center transition-opacity duration-1000 ease-in-out" style="opacity: 0;">
-      <img src="{% static 'images/menu_slideshow/Micaflex3.jpg' %}" alt="Image 8" class="w-full h-full object-cover">
+      <img src="{% static 'images/menu_slideshow/Micaflex3.jpg' %}" alt="Image ex3" class="w-full h-full object-cover">
   </div>
- 
   <div class="slide absolute inset-0 flex items-center justify-center transition-opacity duration-1000 ease-in-out" style="opacity: 0;">
-      <img src="{% static 'images/menu_slideshow/Whitesilicasand.jpg' %}" alt="Image 5" class="w-full h-full object-cover">
+    <img src="{% static 'images/menu_slideshow/dolomitea4.jpg' %}" alt="Image a5" class="w-full h-full object-cover">
+</div>
+<div class="slide absolute inset-0 flex items-center justify-center transition-opacity duration-1000 ease-in-out" style="opacity: 0;">
+  <img src="{% static 'images/menu_slideshow/dolomitea6.jpg' %}" alt="Image a6" class="w-full h-full object-cover">
+</div>
+<div class="slide absolute inset-0 flex items-center justify-center transition-opacity duration-1000 ease-in-out" style="opacity: 0;">
+  <img src="{% static 'images/menu_slideshow/dolomitea7.jpg' %}" alt="Image a7" class="w-full h-full object-cover">
+</div>
+<div class="slide absolute inset-0 flex items-center justify-center transition-opacity duration-1000 ease-in-out" style="opacity: 0;">
+  <img src="{% static 'images/menu_slideshow/dolomitea8.jpg' %}" alt="Image a8" class="w-full h-full object-cover">
+</div>
+<div class="slide absolute inset-0 flex items-center justify-center transition-opacity duration-1000 ease-in-out" style="opacity: 0;">
+  <img src="{% static 'images/menu_slideshow/dolomitea11.jpg' %}" alt="Image a11" class="w-full h-full object-cover">
+</div>
+<div class="slide absolute inset-0 flex items-center justify-center transition-opacity duration-1000 ease-in-out" style="opacity: 0;">
+  <img src="{% static 'images/menu_slideshow/dolomitea9.jpg' %}" alt="Image a9" class="w-full h-full object-cover">
+</div>
+<div class="slide absolute inset-0 flex items-center justify-center transition-opacity duration-1000 ease-in-out" style="opacity: 0;">
+  <img src="{% static 'images/menu_slideshow/dolomitea10.jpg' %}" alt="Image a10" class="w-full h-full object-cover">
+</div>
+<div class="slide absolute inset-0 flex items-center justify-center transition-opacity duration-1000 ease-in-out" style="opacity: 0;">
+  <img src="{% static 'images/menu_slideshow/dolomitea12.jpg' %}" alt="Image a12" class="w-full h-full object-cover">
+</div>
+<div class="slide absolute inset-0 flex items-center justify-center transition-opacity duration-1000 ease-in-out" style="opacity: 0;">
+  <img src="{% static 'images/menu_slideshow/dolomitea13.jpg' %}" alt="Image a13" class="w-full h-full object-cover">
+</div>
+<div class="slide absolute inset-0 flex items-center justify-center transition-opacity duration-1000 ease-in-out" style="opacity: 0;">
+  <img src="{% static 'images/menu_slideshow/dolomitea14.jpg' %}" alt="Image a14" class="w-full h-full object-cover">
+</div>
+  <div class="slide absolute inset-0 flex items-center justify-center transition-opacity duration-1000 ease-in-out" style="opacity: 0;">
+      <img src="{% static 'images/menu_slideshow/dolomitea2.jpg' %}" alt="Image a2" class="w-full h-full object-cover">
   </div>
   <div class="slide absolute inset-0 flex items-center justify-center transition-opacity duration-1000 ease-in-out" style="opacity: 0;">
     <img src="{% static 'images/menu_slideshow/Dolomite4.jpg' %}" alt="Image 4" class="w-full h-full object-cover">
 </div>
 <div class="slide absolute inset-0 flex items-center justify-center transition-opacity duration-1000 ease-in-out" style="opacity: 0;">
-  <img src="{% static 'images/menu_slideshow/Dolomite3.jpg' %}" alt="Image 3" class="w-full h-full object-cover">
+  <img src="{% static 'images/menu_slideshow/dolomitea1.jpg' %}" alt="Image a1" class="w-full h-full object-cover">
 </div>
 <div class=" pt-64 text-center card">
   <a
@@ -58,7 +87,7 @@
           slideIndex = (slideIndex + 1) % slides.length; // Move to the next slide
       }
 
-      setInterval(showSlides, 3000); // Change slide every 3 seconds
+      setInterval(showSlides, 1500); // Change slide every 3 seconds
       showSlides(); // Show the first slide immediately
     }
   )
@@ -68,7 +97,7 @@
          <!-- ====== About/chef Section Start -->
          <section
          id="about"
-         class="bg-slate-950 px-2 pb-8 pt-12 dark:bg-dark-2 lg:pb-[70px] lg:pt-[120px]2"
+         class="bg-slate-800 px-2 pb-8 pt-12 dark:bg-dark-2 lg:pb-[70px] lg:pt-[120px]2"
        >
          <div class="md:mx-16 2xl:mx-32 px-2">
            <div class="wow fadeInUp" data-wow-delay=".2s">
@@ -112,7 +141,7 @@
                    </div>
                  </div>
                </div>
-             </div>SONA PLC
+             </div>
            </div>
          </div>
          <script>
