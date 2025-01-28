@@ -20,7 +20,7 @@
         <i class="fas fa-home"></i> 
     </a>
     <span class="text-sm text-gray-400"><i class="fas fa-chevron-right"></i></span>
-    <a href="{{single_product.category.get_url}}" class="text-primary text-base font-medium capitalize">
+    <a href="#" class="text-primary text-base font-medium capitalize">
         {{single_product.category}}
     </a>
     <span class="text-sm text-gray-400"><i class="fas fa-chevron-right"></i></span>
@@ -235,7 +235,7 @@ function slideImages(direction) {
             </button> {% endcomment %}
             </form>
                 {% endif %}
-                <a href="tel:{{single_product.product_phone}}" class="bg-orange-400 border hover:bg-black  border-gray-300 text-white px-3 xl:px-8 py-2 font-medium rounded uppercase 
+                <a href="tel:{{single_product.product_phone}}" class="bg-green-900 border hover:bg-yellow-700  border-gray-300 text-white px-3 xl:px-8 py-2 font-medium rounded uppercase 
                 text-sm flex items-center">
                     <span class="mr-1 xl:mr-2 text-blue-500 text-lg">
                         <svg xmlns="http://www.w3.org/2000/svg" height="16" width="16" viewBox="0 0 512 512">
@@ -248,20 +248,7 @@ function slideImages(direction) {
                         class="text-base md:text-base xl:text-lg">{{single_product.product_phone|slice:":2"}}-{{single_product.product_phone|slice:"2:4"}}-{{single_product.product_phone|slice:"4:6"}}-{{single_product.product_phone|slice:"6:8"}}-{{single_product.product_phone|slice:"8:"}}</span>
                 </a>
             </div>
-            <div class="flex space-x-12 mt-4 justify-center md:justify-start item-center text-center">
-                <a href="{{ single_product.product_owner.facebook_url }}" target="_blank"
-                    class="border-slate-800 h-12 w-12  hover:bg-orange-400 rounded-full border  flex items-center justify-center">
-                    <i class="fab fa-facebook-f text-2xl text-blue-600"></i>
-                </a>
-                <a href="{{ single_product.product_owner.telegram_url }}" target="_blank"
-                    class="border-slate-800 h-12 w-12 hover:bg-orange-400 rounded-full border flex items-center justify-center">
-                    <i class="fab fa-telegram text-2xl text-blue-600"></i>
-                </a>
-                <a href="{{ single_product.product_owner.whatsapp_url }}" target="_blank"
-                    class="border-slate-800 h-12 w-12 hover:bg-orange-400 rounded-full border  flex items-center justify-center">
-                    <i class="fab fa-whatsapp text-2xl text-bold text-green-700"></i>
-                </a>
-            </div>
+
         </div>
     </div>
     <div class="container pb-8 items-center px-4 sm:px-8 md:px-16 lg:px-32 xl:px-32 2xl:max-w-9xl 2xl:mx-auto">

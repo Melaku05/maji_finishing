@@ -67,23 +67,23 @@ MIDDLEWARE = [
 MIDDLEWARE = [mw for mw in MIDDLEWARE if mw]
 
 
-DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.sqlite3',
-            'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-        }
-    }
-
 # DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.mysql',
-#         'NAME': 'sonapltv_ecommerce_postgres',
-#         'HOST': 'localhost',
-#         'PORT': 3306,
-#         'USER': 'sonapltv_postgres',
-#         'PASSWORD': 'Melaku11@#',
+#         'default': {
+#             'ENGINE': 'django.db.backends.sqlite3',
+#             'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+#         }
 #     }
-# }
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'sonapltv_ecommerce_postgres',
+        'HOST': 'localhost',
+        'PORT': 3306,
+        'USER': 'sonapltv_postgres',
+        'PASSWORD': 'Melaku11@#',
+    }
+}
 # DATABASES = {
 #     'default': {
 #         'ENGINE': 'django.db.backends.mysql',
@@ -229,11 +229,11 @@ CORS_ALLOW_ALL_ORIGINS = not DEBUG
 
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'mail.kodeplc.com' 
+EMAIL_HOST = 'mail.sonaplc.com' 
 EMAIL_PORT = 465  
 EMAIL_USE_SSL = True  
 EMAIL_USE_TLS = False  
-EMAIL_HOST_USER = 'info@kodeplc.com'  
-EMAIL_HOST_PASSWORD = 'KodePLC11@#'  
-DEFAULT_FROM_EMAIL = 'info@kodeplc.com'  
-ADMIN_EMAIL = 'info@kodeplc.com'  
+EMAIL_HOST_USER = 'dereje@sonaplc.com'  
+EMAIL_HOST_PASSWORD = 'Sona11@#@#'  
+DEFAULT_FROM_EMAIL = 'info@sonaplc.com'  
+ADMIN_EMAIL = 'info@sonaplc.com'  

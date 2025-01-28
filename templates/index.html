@@ -262,28 +262,29 @@
         </header>
           <!-- product wrapper -->
           <div id="product-list" class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 gap-1 2xl:gap-3 lg:pr-16 xl:pr-32 2xl:pr-32 mb-6 lg:mb-8">
-            {% for product in most_liked_products %}
-            <a class="flex flex-col card" href="{{product.get_store_url}}">
+            {% for product in products %}
+            <a class="flex flex-col card" href="{{ product.get_store_url }}">
                 <div class="m-2 bg-white shadow-md rounded-lg overflow-hidden flex-grow">
                     <div class="relative group">
                         <div class="w-full h-64 2xl:h-80 overflow-hidden relative">
                             {% with product.get_main_image as main_image %}
                             {% if main_image %}
-                                <img class="w-full h-full object-cover transform transition-transform duration-300 group-hover:scale-110" src="{{ main_image.image.url }}" alt="{{ product.product_name }}">
-                                <div class="absolute inset-0 flex items-center justify-center">
-                                    <span class="text-green-900 text-lg md:text-2xl font-thin p-2 rounded"> SONA PLC</span>
-                                </div>
+                            <img class="w-full h-full object-cover transform transition-transform duration-300 group-hover:scale-110" src="{{ main_image.image.url }}" alt="{{ product.product_name }}">
+                            <div class="absolute inset-0 flex items-center justify-center">
+                                <span class="text-green-900 text-lg md:text-2xl font-thin p-2 rounded"> SONA PLC</span>
+                            </div>
                             {% endif %}
                             {% endwith %}
                         </div>
-                      </div>
+                    </div>
                     <div class="bg-green-900 hover:text-purple-400 text-center py-2 rounded-b mt-1">
                         <div class="text-white w-full inline-block volkhov">{{ product.product_name|slice:":16"|capfirst }}</div>
                     </div>
                 </div>
-              </a>
+            </a>
             {% endfor %}
         </div>
+        
         
       </div>
       

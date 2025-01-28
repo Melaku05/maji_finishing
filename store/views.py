@@ -32,20 +32,21 @@ def store(request, category_slug=None):
     products = None
     template = 'index.html'
 
-    if category_slug != None:
+    if category_slug is not None:
         categories = get_object_or_404(Category, category_slug=category_slug)
-        products = Product.objects.filter(category=categories, product_is_available=True).select_related('category').prefetch_related('images').order_by('-product_modified_date')
+        products = Product.objects.filter(
+            category=categories, product_is_available=True
+        ).select_related('category').prefetch_related('images').order_by('-product_modified_date', '-product_created_date')
         template = 'store.html'
     else:
         products = cache.get('latest_products')
         if not products:
-            products = Product.objects.filter(product_is_available=True).prefetch_related('images').order_by('-product_modified_date')[:30]
-            cache.set('latest_products', products, 60*60*0)  
+            products = Product.objects.filter(product_is_available=True).prefetch_related(
+                'images'
+            ).order_by('-product_modified_date', '-product_created_date')[:40]
+            cache.set('latest_products', products, 60 * 0)  # Cache for 1 hour
 
-
-    most_liked_products_with_count = most_liked_products(request)['most_liked_products']
-    
-    paginator = Paginator(products, 30)
+    paginator = Paginator(products, 40)  # Paginate to show 40 products per page
     page = request.GET.get('page')
 
     try:
@@ -63,12 +64,11 @@ def store(request, category_slug=None):
         data = {"products": list(products_page), "end": False}
         return JsonResponse(data, safe=False)
 
-    # Your existing code
     for product in products:
         product.average_rating = product.average_rating()
         product.review_count = product.review_count()
-    most_liked_product = most_liked_products_with_count[0] if most_liked_products_with_count else None
-    return render(request, template, {'products': products_page, 'most_liked_product': most_liked_product})
+    return render(request, template, {'products': products_page})
+
 
 def product_detail(request, category_slug, product_slug):
     print("product_detail view was called")
