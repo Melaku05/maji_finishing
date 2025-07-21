@@ -16,7 +16,7 @@ SECRET_KEY = config('SECRET_KEY')
 DEBUG = True
 
 # ALLOWED_HOSTS configuration
-ALLOWED_HOSTS = ["localhost","sonaplc.com"]
+ALLOWED_HOSTS = ["localhost","majigeneralfinishing.com"]
 
 
 # Application definition
@@ -37,7 +37,11 @@ INSTALLED_APPS = [
     'blog.apps.BlogConfig', 
     'heads.apps.HeadsConfig',
     'advertizement.apps.AdvertizementConfig',
+    'slideshow',
     'nested_admin',
+    'gallery',
+    'video_gallery',
+    'main_video',
     'theme',
     'django_quill',
     'django_browser_reload' if DEBUG else '',
@@ -67,23 +71,25 @@ MIDDLEWARE = [
 MIDDLEWARE = [mw for mw in MIDDLEWARE if mw]
 
 
-# DATABASES = {
-#         'default': {
-#             'ENGINE': 'django.db.backends.sqlite3',
-#             'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-#         }
-#     }
-
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'sonapltv_ecommerce_postgres',
-        'HOST': 'localhost',
-        'PORT': 3306,
-        'USER': 'sonapltv_postgres',
-        'PASSWORD': 'Melaku11@#',
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        }
     }
-}
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'maji_finishing_db',
+#         'HOST': 'localhost',
+#         'PORT': 3306,
+#         'USER': 'maji_user',
+#         'PASSWORD': 'Majifinishing11',
+#     }
+# }
+
+
 # DATABASES = {
 #     'default': {
 #         'ENGINE': 'django.db.backends.mysql',

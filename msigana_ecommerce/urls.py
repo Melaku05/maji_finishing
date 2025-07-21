@@ -15,9 +15,11 @@ urlpatterns = [
     path('blog/', include('blog.urls')),
     path('about-us/', views.about_us, name='about-us'),
     path('contact-us/', include('contact.urls')),
+    path("gallery/", include("gallery.urls")),
     path('accounts/', include('allauth.urls')),
     path('minerals/', views.minerals, name='minerals'),
-
+    path('main_video/', include('main_video.urls')),
+    path("video-gallery/", include("video_gallery.urls")),
 ]
 # admin.site.site_header = 'Tanabeles Login'
 

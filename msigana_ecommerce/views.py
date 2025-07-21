@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from slideshow.models import BackgroundSlide
 from store.models import Product
 from users.forms import ProfileForm
 from django.contrib.auth.decorators import login_required
@@ -7,8 +8,11 @@ import os
 
 def home(request):
     products = Product.objects.all().filter(product_is_available=True)
+    products = Product.objects.filter(product_is_available=True).order_by('-product_modified_date', '-product_created_date')
+    slides = BackgroundSlide.objects.filter(is_active=True)
     context = {
-        'products': products
+        'products': products,
+        'slides': slides
     }
     return render(request, 'index.html', context)
 
