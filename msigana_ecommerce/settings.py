@@ -83,7 +83,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'maji_finishing_db',
         'HOST': 'localhost',
-        'PORT': 3306,
+        'PORT': 5432,
         'USER': 'maji_user',
         'PASSWORD': 'Majifinishing11',
     }
