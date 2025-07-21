@@ -71,23 +71,23 @@ MIDDLEWARE = [
 MIDDLEWARE = [mw for mw in MIDDLEWARE if mw]
 
 
-DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.sqlite3',
-            'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-        }
-    }
-
 # DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql',
-#         'NAME': 'maji_finishing_db',
-#         'HOST': 'localhost',
-#         'PORT': 3306,
-#         'USER': 'maji_user',
-#         'PASSWORD': 'Majifinishing11',
+#         'default': {
+#             'ENGINE': 'django.db.backends.sqlite3',
+#             'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+#         }
 #     }
-# }
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'maji_finishing_db',
+        'HOST': 'localhost',
+        'PORT': 3306,
+        'USER': 'maji_user',
+        'PASSWORD': 'Majifinishing11',
+    }
+}
 
 
 # DATABASES = {
